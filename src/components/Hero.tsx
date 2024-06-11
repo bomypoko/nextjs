@@ -19,22 +19,22 @@ const Hero = () => {
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
         </div>
 
-        <div className='p-2 flex justify-center relative my-20 z-10'>
-            <div className=' max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-              <h1 className='uppercase text-xl tracking-widest text-center text-blue-100'>
+        <div className='deBug p-2 flex justify-center relative my-20 z-10'>
+            <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
+              <h1 className='uppercase text-xl tracking-widest text-center '>
                 Dynamic Web Magic with NextJs
               </h1>
+      {/* Text Timing  */}
+              <TextGenerateEffect 
+              className="text-center text[40px] md:text-5xl lg:text-6xl "
+              words='Ratchasri Kidking'/>
 
-              <h2>  
-                <TextGenerateEffect 
-                  className='string'
-                  words='Ratchasri Kidking'/>
+                <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl '>
+                  Hi, I&apos;m Ratchasri, a Next.Js Developer base in Thailand
+                </p>
 
-                 
-              </h2>
             </div>
         </div>
-
     </div>
   )
 }
