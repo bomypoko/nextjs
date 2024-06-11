@@ -1,5 +1,6 @@
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
+import { TextGenerateEffect } from './ui/TextGenerateEffect'
 
 const Hero = () => {
   return (
@@ -23,6 +24,14 @@ const Hero = () => {
               <h1 className='uppercase text-xl tracking-widest text-center text-blue-100'>
                 Dynamic Web Magic with NextJs
               </h1>
+
+              <h2>  
+                <TextGenerateEffect 
+                  className='string'
+                  words='Ratchasri Kidking'/>
+
+                 
+              </h2>
             </div>
         </div>
 
