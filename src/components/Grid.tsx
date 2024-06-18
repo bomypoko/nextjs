@@ -10,7 +10,9 @@ const Grid = () => {
       {/* Loop Data from folder Data */}
 
       <BentoGrid>
+        
         {gridItems.map(({id , title , description,className,img,imgClassName,titleClassName,spareImg}) => (
+
           <BentoGridItem
             id={id}
             description={description}
@@ -20,11 +22,10 @@ const Grid = () => {
             img={img}
             imgClassName={imgClassName}
             titleClassName={titleClassName}
+            spareImg={spareImg}
             /> 
         ))}
       </BentoGrid>
-
-    
     </section>
     
   )
