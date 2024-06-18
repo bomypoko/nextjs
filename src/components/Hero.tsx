@@ -8,7 +8,8 @@ import { FaLocationArrow } from 'react-icons/fa'
 const Hero = () => {
   return (
     // Start MAIN Container 
-    <div className='pb-20 pt-36 '>
+    // pb-20 pt-36
+    <div className='pb-20  pt-36'>
 
       {/* Spotlight Here */}
       {/* -left-10 -top-10 md:-left-32 md:-top-20 */}
@@ -25,7 +26,7 @@ const Hero = () => {
         </div>
       {/* Grid Zone End */}
 
-        <div className='p-2 flex justify-center relative my-20 z-10'>
+        <div className='p-2 flex justify-center relative my-20 z-10 '>
             <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
               <h1 className='uppercase text-xl tracking-widest text-center '>
                 Dynamic Web Magic with NextJs
