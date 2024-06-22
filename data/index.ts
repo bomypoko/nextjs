@@ -216,4 +216,24 @@ export const navItems = [
       id: 3,
       img: "/link.svg",
     },
+
+    
   ];
+
+  export const tecStack = [
+    {
+      id: 1,
+      title: "React.Js" 
+    },
+    {
+      id: 2,
+      title: "Next.Js"
+    },
+    {
+      id: 3,
+      title: "Typescript"
+    },
+  ]
+
+
+  
