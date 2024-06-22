@@ -87,11 +87,11 @@
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 
-  .deBug {
+  .bom {
     @apply border border-red-50 
   }
 
-  .deBug1 {
+  .bom1 {
     @apply border border-blue-500 
   }
 
