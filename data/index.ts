@@ -220,7 +220,7 @@ export const navItems = [
     
   ];
 
-  export const tecStack = [
+  export const tecStackLeft = [
     {
       id: 1,
       title: "React.Js" 
@@ -232,6 +232,21 @@ export const navItems = [
     {
       id: 3,
       title: "Typescript"
+    },
+  ]
+  
+  export const tecStackRight = [
+    {
+      id: 1,
+      title: "Node.Js" 
+    },
+    {
+      id: 2,
+      title: "MongoDB.Js"
+    },
+    {
+      id: 3,
+      title: "AWS"
     },
   ]
 
