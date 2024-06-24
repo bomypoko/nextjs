@@ -1,8 +1,15 @@
+"use client"
+
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
 import { div } from "three/examples/jsm/nodes/Nodes.js";
-import { tecStack, tecStackLeft, tecStackRight } from "../../../data";
+import { tecStackLeft, tecStackRight } from "../../../data";
+import Lottie from "react-lottie";
+import { useState } from "react";
+import animationData from '../../../data/confetti.json'
+import MagicButton from "./MagicButton";
+import { IoCopyOutline } from "react-icons/io5";
 
 export const BentoGrid = ({
   className,
@@ -49,8 +56,18 @@ export const BentoGridItem = ({
   spareImg?: string;
   
 }) => {
+
+  const [copied,setCopied] = useState(false)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("orc_hero@hotmail.com");
+    setCopied(true)
+  }
+
+
+
   return (
-    // add Overflow class
+    
     <div
         className={cn(
           "row-span-1 rounded-3xl overflow-hidden relative group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none  justify-between flex flex-col space-y-4 border border-white/[0.1]",
@@ -86,7 +103,7 @@ export const BentoGridItem = ({
 
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className=" absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"/>
+            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"/>
           </BackgroundGradientAnimation>
         )}
 
@@ -104,10 +121,10 @@ export const BentoGridItem = ({
         {id === 2 && <GlobeDemo/> }
 
         {id === 3 && (
-          // flex gap-4 lg:gap-5 w-fit absolute -right-3 lg:right-2
-            <div className=" absolute flex gap-4 lg:gap-5 w-fit -right-3 lg:right-2 ">
+          
+            <div className=" flex gap-4 lg:gap-5 w-fit absolute -right-3 lg:right-2">
 
-              {/* Left-Side */}
+            
               <div className="flex flex-col gap-3 lg:gap-8 ">
                 {tecStackLeft.map((item) => (
                   <span
@@ -116,12 +133,12 @@ export const BentoGridItem = ({
                         {item.title}
                     </span>
                 ))}
-              <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+              
               </div>
               
-              {/* Right-Side */}
+             
               <div className="flex flex-col gap-3 lg:gap-8 ">
-              <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+              
                 {tecStackRight.map((item) => (
                   <span
                     key={item.id}
@@ -131,9 +148,29 @@ export const BentoGridItem = ({
                 ))}
               
               </div>
-          
-                  
             </div>
+            )}
+
+            {id === 6 && (
+              <div className="bom mt-5 relative">
+                <div className={`absolute -bottom-5 right-0`}>
+                  <Lottie options={{
+                    loop: copied,
+                    autoplay: copied,
+                    animationData,
+                    rendererSettings:{
+                      preserveAspectRatio: "xMidYMid slice",
+                    }
+                  }}/>
+                </div>
+                <MagicButton 
+                  title={copied ? 'Email Copy' : 'Copy My Email'}
+                  icon={<IoCopyOutline/>} 
+                  position="left"
+                  otherClasses='bg-[#161a31]'
+                  handleClick={handleCopy}
+                  />
+              </div>
             )}
         </div>
       </div>
