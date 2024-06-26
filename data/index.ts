@@ -223,11 +223,11 @@ export const navItems = [
   export const tecStackLeft = [
     {
       id: 1,
-      title: "React.Js" 
+      title: "ReactJS" 
     },
     {
       id: 2,
-      title: "Next.Js"
+      title: "NextJS"
     },
     {
       id: 3,
@@ -238,11 +238,11 @@ export const navItems = [
   export const tecStackRight = [
     {
       id: 1,
-      title: "Node.Js" 
+      title: "NodeJS" 
     },
     {
       id: 2,
-      title: "MongoDB.Js"
+      title: "MongoDB"
     },
     {
       id: 3,

@@ -80,7 +80,7 @@ export const BentoGridItem = ({
         }}
       > 
    
-        <div className={`${id === 6} && "flex justify-center h-full"`}>
+        <div className={`${id === 6 && "flex justify-center"} h-full`}>
           <div className="absolute w-full h-full">
              {/* Loop Picture from Data */}
             {img && (
@@ -152,7 +152,7 @@ export const BentoGridItem = ({
             )}
 
             {id === 6 && (
-              <div className="bom mt-5 relative">
+              <div className=" mt-5 relative">
                 <div className={`absolute -bottom-5 right-0`}>
                   <Lottie options={{
                     loop: copied,
@@ -164,7 +164,7 @@ export const BentoGridItem = ({
                   }}/>
                 </div>
                 <MagicButton 
-                  title={copied ? 'Email Copy' : 'Copy My Email'}
+                  title={copied ? 'Email Copied' : 'Copy My Email'}
                   icon={<IoCopyOutline/>} 
                   position="left"
                   otherClasses='bg-[#161a31]'
