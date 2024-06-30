@@ -3,6 +3,7 @@ import React from 'react'
 import { projects } from '../../data'
 import { PinContainer } from './ui/3d-pin'
 import { totalmem } from 'os'
+import { FaLocationArrow } from 'react-icons/fa'
 
 const RecentProjects = () => {
   return (
@@ -13,17 +14,17 @@ const RecentProjects = () => {
             <span className='text-purple'> recent project</span>
         </h1>
        
-        <div className='flex flex-wrap items-center justify-center  p-4 gap-16 mt-10'>
+        <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10 bom'>
             {/* Destructuring Item */}
 
             {projects.map(({id,title, des,img, iconLists, link ,}) => (
-                <div className='flex items-center justify-center h-[25rem] lg:min-h-[32.5rem] sm:w-96 w-[80vw]'
+                <div className='sm:h-[41rem] h-[32rem] flex items-center justify-center  lg:min-h-[32.5rem] sm:w-[570px] w-[80vw]'
                     key={id}>
                        <PinContainer
-                        title={title}
+                        title={link}
                         href={link}
                             >
-                                <div className=' relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh]'>
+                                <div className='relative flex items-center justify-center sm:w-[570px] w-[80vw] sm:h-[40vh] h-[30vh] overflow-hidden  lg:h-[30vh]'>
                                     <div>
                                         <img 
                                             src="/bg.png" 
@@ -44,13 +45,22 @@ const RecentProjects = () => {
 
                                 <div className='flex items-center justify-between mt-7 mb-3'>
                                     <div className='flex items-center '>   
-                                        {iconLists.map((icon) => (
+                                        {iconLists.map((icon , index) => (
                                             <div key={icon}
-                                                 className='border border-white/[0.2] rounded-xl bg-black lg:w-10 lg:h-10 flex items-center justify-center w-8 h-8'>
+                                                 className='border border-white/[0.2] rounded-xl bg-black lg:w-10 lg:h-10 flex items-center justify-center w-8 h-8'
+                                                 style={{
+                                                    transform: `translateX(-${5 * index * 2}px)`
+                                                 }}>
                                                 <img src={icon} alt={icon}
-                                                     className='p-2 '/>
+                                                     className='p-2'/>
                                             </div>
                                         ))}
+                                    </div>
+                                    <div className='flex justify-center items-center'>
+                                       <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Check Live Site</p>
+                                       <FaLocationArrow 
+                                            className='ms-3'
+                                            color="#CBACF9" />
                                     </div>
                                 </div>
 

@@ -9,11 +9,11 @@ const Hero = () => {
   return (
     // Start MAIN Container 
     // pb-20 pt-36
-    <div className='pb-20  pt-36'>
+    <div className='pb-20  pt-36 relative overflow-hidden'>
 
       {/* Spotlight Here */}
       {/* -left-10 -top-10 md:-left-32 md:-top-20 */}
-        <div> 
+        <div className='-left-10 -top-10 md:-left-32 md:-top-20 '> 
             <Spotlight className='-left-10 -top-20' fill='white'/>
             <Spotlight className='top-10 left-full h-[80vh] w-[50vw]'fill='blue'/>
             <Spotlight className='top-28 left-80 h-[80vh] w-[50vw]'fill='blue'/>
