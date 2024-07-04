@@ -13,14 +13,9 @@ export default function Home() {
     <main className=" relative bg-black flex flex-col justify-center items-center overflow-hidden mx-auto sm:px-10 px-5">
       <div className=" max-w-7xl w-full">
 
-        {/* <FloatingNav navItems={[
-          {name: "Home", link: "/" , icon: <FaHome/>}
-        ]} /> */}
 
-        <FloatingNav navItems={[
-          {name: "Home", link: "/" , icon: <FaHome/>}
-          
-        ]}/>
+        <FloatingNav navItems={navItems}
+          />
 
         <Hero/>
         <Grid/>

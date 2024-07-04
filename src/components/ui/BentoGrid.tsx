@@ -137,7 +137,7 @@ export const BentoGridItem = ({
               </div>
               
              
-              <div className="flex flex-col gap-3 lg:gap-8 ">
+              <div className="flex flex-col gap-3 lg:gap-8 md-gap-3 ">
               
                 {tecStackRight.map((item) => (
                   <span
